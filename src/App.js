@@ -19,7 +19,10 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <EditorComponent></EditorComponent>
-        <SidebarComponent></SidebarComponent>
+        <SidebarComponent
+          selectedNoteIndex={this.state.selectedNoteIndex}
+          notes={this.state.notes}
+        ></SidebarComponent>
       </div>
     );
   }
