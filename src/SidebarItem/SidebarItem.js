@@ -1,4 +1,4 @@
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/styles";
 import styles from "./styles";
 import React from "react";
 import { ListItem, ListItemText } from "@material-ui/core";

@@ -30,6 +30,12 @@ class SidebarComponent extends React.Component {
                 placeholder="Add a new Title"
                 onKeyUp={(e) => this.updateTitle(e.target.value)}
               ></input>
+              <Button
+                className={classes.newNoteSubmitBtn}
+                onClick={this.newNote}
+              >
+                Submit Note
+              </Button>
             </div>
           ) : null}
           <List>
