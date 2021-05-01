@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import firebase from "firebase/app";
-import "firebase/firestore";
 import App from "./App";
 
 const firebaseConfig = {
