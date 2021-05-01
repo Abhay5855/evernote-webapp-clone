@@ -67,7 +67,9 @@ class SidebarComponent extends React.Component {
     console.log("note select");
   };
 
-  deleteNote = () => {};
+  deleteNote = () => {
+    console.log("delete note");
+  };
 }
 
 export default withStyles(styles)(SidebarComponent);
