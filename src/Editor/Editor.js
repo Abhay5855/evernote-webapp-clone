@@ -3,7 +3,6 @@ import debounce from "../helper";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import React from "react";
-import { async } from "@firebase/util";
 
 class EditorComponent extends React.Component {
   constructor() {
