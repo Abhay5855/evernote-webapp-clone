@@ -1,6 +1,10 @@
 import "./styles.css";
 import firebase from "firebase/app";
 import React from "react";
+import "firebase/firestore";
+import EditorComponent from "./Editor/Editor";
+import SidebarComponent from "./Sidebar/Sidebar";
+
 class App extends React.Component {
   constructor() {
     super();
@@ -12,7 +16,12 @@ class App extends React.Component {
   }
 
   render() {
-    return <div>Hello</div>;
+    return (
+      <div className="app-container">
+        <EditorComponent></EditorComponent>
+        <SidebarComponent></SidebarComponent>
+      </div>
+    );
   }
 
   componentDidMount = () => {
