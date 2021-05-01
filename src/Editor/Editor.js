@@ -16,9 +16,9 @@ class EditorComponent extends React.Component {
   }
 
   render() {
-    // const { classes } = this.props;
+    const { classes } = this.props;
     return (
-      <div className={this.props.EditorComponent}>
+      <div className={classes.EditorComponent}>
         <ReactQuill
           value={this.state.text}
           onChange={this.updateBody}
