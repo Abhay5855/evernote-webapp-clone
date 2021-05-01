@@ -3,6 +3,7 @@ import debounce from "../helper";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import React from "react";
+import BorderColorIcon from "@material-ui/icons/BorderColor";
 
 class EditorComponent extends React.Component {
   constructor() {
@@ -35,7 +36,16 @@ class EditorComponent extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.EditorComponent}>
+      <div className={classes.editorContainer}>
+        <BorderColorIcon className={classes.editIcon}></BorderColorIcon>
+
+        <input
+          className={classes.titleInput}
+          placeholder="Title..."
+          value={this.state.title ? this.state.title : ""}
+          onChange={(e) => this.updateTitle(e.target.value)}
+        ></input>
+
         <ReactQuill
           value={this.state.text}
           onChange={this.updateBody}
@@ -48,6 +58,12 @@ class EditorComponent extends React.Component {
     this.setState({ text: val });
     this.update();
   };
+
+  updateTitle = async (text) => {
+    this.setState({ title: text });
+    this.update();
+  };
+
   update = debounce(() => {
     this.props.noteUpdate(this.state.id, {
       title: this.state.title,

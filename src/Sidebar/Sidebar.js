@@ -60,7 +60,7 @@ class SidebarComponent extends React.Component {
   };
 
   updateTitle = (txt) => {
-    console.log("Here it is :", txt);
+    this.setState({ title: txt });
   };
 
   newNote = () => {
