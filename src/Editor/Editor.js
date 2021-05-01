@@ -7,10 +7,20 @@ import React from "react";
 class EditorComponent extends React.Component {
   constructor() {
     super();
+    this.state = {
+      text: "",
+      title: "",
+      id: ""
+    };
   }
 
   render() {
-    return <div>Hello from editor</div>;
+    // const { classes } = this.props;
+    return (
+      <div className={this.props.EditorComponent}>
+        <ReactQuill></ReactQuill>
+      </div>
+    );
   }
 }
 
