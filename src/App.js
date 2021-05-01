@@ -1,8 +1,6 @@
 import "./styles.css";
 import firebase from "firebase/app";
-import "firebase/firestore";
 import React from "react";
-
 class App extends React.Component {
   constructor() {
     super();
